@@ -1,0 +1,23 @@
+{
+  "name": "tscc-query-autofill",
+  "version": "1.0.0",
+  "description": "自動填入台灣高鐵悠遊聯名卡搭乘資訊查詢系統",
+  "main": "index.js",
+  "scripts": {
+    "build": "uglifyjs --compress --mangle -o dist/tscc-query-autofill.min.js src/tscc-query-autofill.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poychang/tscc-query-autofill.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poychang/tscc-query-autofill/issues"
+  },
+  "homepage": "https://github.com/poychang/tscc-query-autofill#readme",
+  "dependencies": {
+    "uglify-js": "^3.0.28"
+  }
+}
