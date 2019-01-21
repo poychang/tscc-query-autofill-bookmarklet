@@ -14,5 +14,5 @@
 3. 請你手動修改這個 **查詢高鐵搭乘資訊** 的超連結，並將下列程式碼中的 `YOUR_CARD_ID` (悠遊聯名卡卡號)和 `YOUR_BIRTHDAY` (持卡人生日)改成您的查詢資訊後，貼上網址欄為即可！
 
 ```js
-javascript:!function(){if("https://queryweb.tscc.com.tw/thsrc_web/"===location.href){var t=document.getElementById("txtCardID"),e=document.getElementById("txtBirth");t.value="YOUR_CARD_ID",e.value="YOUR_BIRTHDAY"}}();
+javascript:!function(){var t="https://queryweb.tscc.com.tw/thsrc_web/";if(location.href===t){var e=document.getElementById("txtCardID"),c=document.getElementById("txtBirth");e.value="YOUR_CARD_ID",c.value="YOUR_BIRTHDAY"}else location.href=t}();
 ```
