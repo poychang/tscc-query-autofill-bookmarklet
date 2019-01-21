@@ -16,3 +16,8 @@
 ```js
 javascript:!function(){var t="https://queryweb.tscc.com.tw/thsrc_web/";if(location.href===t){var e=document.getElementById("txtCardID"),c=document.getElementById("txtBirth");e.value="YOUR_CARD_ID",c.value="YOUR_BIRTHDAY"}else location.href=t}();
 ```
+
+## 使用方式
+
+1. 第一次點選書籤開啟[台灣高鐵悠遊聯名卡搭乘資訊查詢系統](https://queryweb.tscc.com.tw/thsrc_web/)
+2. 第二次點選書籤會輸入悠遊聯名卡卡號及持卡人生日
