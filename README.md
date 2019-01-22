@@ -21,3 +21,5 @@ javascript:!function(){var t="https://queryweb.tscc.com.tw/thsrc_web/";if(locati
 
 1. 第一次點選書籤開啟[台灣高鐵悠遊聯名卡搭乘資訊查詢系統](https://queryweb.tscc.com.tw/thsrc_web/)
 2. 第二次點選書籤會輸入悠遊聯名卡卡號及持卡人生日
+
+部落格文章：[在台灣高鐵搭乘資訊查詢系統自動填入常用的悠遊卡號碼](https://poychang.github.io/autofill-tscc-boarding-info-query-paramter/)
