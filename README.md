@@ -14,7 +14,13 @@
 3. 請你手動修改這個 **查詢高鐵搭乘資訊** 的超連結，並將下列程式碼中的 `YOUR_CARD_ID` (悠遊聯名卡卡號)和 `YOUR_BIRTHDAY` (持卡人生日)改成您的查詢資訊後，貼上網址欄為即可！
 
 ```js
-javascript:!function(){var t="https://queryweb.tscc.com.tw/thsrc_web/";if(location.href===t){var e=document.getElementById("txtCardID"),c=document.getElementById("txtBirth");e.value="YOUR_CARD_ID",c.value="YOUR_BIRTHDAY"}else location.href=t}();
+javascript:!function(){var t=location.href,e="https://queryweb.tscc.com.tw/thsrc_web/";t===e?(document.getElementById("txtCardID").value="YOUR_CARD_ID",document.getElementById("txtBirth").value="YOUR_BIRTHDAY"):"https://queryweb.tscc.com.tw/thsrc_web/THSRC_page.aspx"===t?(document.getElementById("VAT_Num").value="YOUR_VAT_NUMBER",document.getElementById("txtBank_code").value="YOUR_BANK_CODE"):location.href=e}();
+```
+
+4. 若需要 **電子車票證明**，請再將修改下列程式碼中的 `YOUR_VAT_NUMBER` (公司統一編號)和 `YOUR_BANK_CODE` (悠遊聯名卡發卡銀行代號)改成您的查詢資訊後，貼上網址欄為即可！
+
+```js
+javascript:!function(){var t=location.href,e="https://queryweb.tscc.com.tw/thsrc_web/";t===e?(document.getElementById("txtCardID").value="YOUR_CARD_ID",document.getElementById("txtBirth").value="YOUR_BIRTHDAY"):"https://queryweb.tscc.com.tw/thsrc_web/THSRC_page.aspx"===t?(document.getElementById("VAT_Num").value="YOUR_VAT_NUMBER",document.getElementById("txtBank_code").value="YOUR_BANK_CODE"):location.href=e}();
 ```
 
 ## 使用方式
@@ -23,3 +29,11 @@ javascript:!function(){var t="https://queryweb.tscc.com.tw/thsrc_web/";if(locati
 2. 第二次點選書籤會輸入悠遊聯名卡卡號及持卡人生日
 
 部落格文章：[在台灣高鐵搭乘資訊查詢系統自動填入常用的悠遊卡號碼](https://poychang.github.io/autofill-tscc-boarding-info-query-paramter/)
+
+## 建置方式
+
+```bash
+npm run build
+```
+
+建置完成後，將 `dist\tscc-query-autofill.min.js` 檔案的內容前面加上 `javascript:`  即是 Bookmarklet 瀏覽器書籤小工具。
