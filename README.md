@@ -14,13 +14,13 @@
 3. 請你手動修改這個 **查詢高鐵搭乘資訊** 的超連結，並將下列程式碼中的 `YOUR_CARD_ID` (悠遊聯名卡卡號)和 `YOUR_BIRTHDAY` (持卡人生日)改成您的查詢資訊後，貼上網址欄為即可！
 
 ```js
-javascript:!function(){var t=location.href,e="https://queryweb.tscc.com.tw/thsrc_web/";t===e?(document.getElementById("txtCardID").value="YOUR_CARD_ID",document.getElementById("txtBirth").value="YOUR_BIRTHDAY"):"https://queryweb.tscc.com.tw/thsrc_web/THSRC_page.aspx"===t?(document.getElementById("VAT_Num").value="YOUR_VAT_NUMBER",document.getElementById("txtBank_code").value="YOUR_BANK_CODE"):location.href=e}();
+javascript:!function(){var t=location.href,e="https://queryweb.tscc.com.tw/thsrc_web/";t===e?(document.getElementById("txtCardID").value="YOUR_CARD_ID",document.getElementById("txtBirth").value="YOUR_BIRTHDAY"):"https://queryweb.tscc.com.tw/thsrc_web/THSRC_page.aspx"===t?(document.getElementById("VAT_Num").value="YOUR_VAT_NUMBER",document.getElementById("txtBuy").value="YOUR_VAT_NAME",document.getElementById("txtBank_code").value="YOUR_BANK_CODE"):location.href=e}();
 ```
 
-4. 若需要 **電子車票證明**，請再將修改下列程式碼中的 `YOUR_VAT_NUMBER` (公司統一編號)和 `YOUR_BANK_CODE` (悠遊聯名卡發卡銀行代號)改成您的查詢資訊後，貼上網址欄為即可！
+4. 若需要 **電子車票證明**，請再將修改下列程式碼中的 `YOUR_VAT_NUMBER` (公司統一編號)、`YOUR_VAT_NAME` (營利事業名稱)和 `YOUR_BANK_CODE` (悠遊聯名卡發卡銀行代號)改成您的查詢資訊後，貼上網址欄為即可！
 
 ```js
-javascript:!function(){var t=location.href,e="https://queryweb.tscc.com.tw/thsrc_web/";t===e?(document.getElementById("txtCardID").value="YOUR_CARD_ID",document.getElementById("txtBirth").value="YOUR_BIRTHDAY"):"https://queryweb.tscc.com.tw/thsrc_web/THSRC_page.aspx"===t?(document.getElementById("VAT_Num").value="YOUR_VAT_NUMBER",document.getElementById("txtBank_code").value="YOUR_BANK_CODE"):location.href=e}();
+javascript:!function(){var t=location.href,e="https://queryweb.tscc.com.tw/thsrc_web/";t===e?(document.getElementById("txtCardID").value="YOUR_CARD_ID",document.getElementById("txtBirth").value="YOUR_BIRTHDAY"):"https://queryweb.tscc.com.tw/thsrc_web/THSRC_page.aspx"===t?(document.getElementById("VAT_Num").value="YOUR_VAT_NUMBER",document.getElementById("txtBuy").value="YOUR_VAT_NAME",document.getElementById("txtBank_code").value="YOUR_BANK_CODE"):location.href=e}();
 ```
 
 ## 使用方式
