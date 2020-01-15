@@ -36,4 +36,4 @@ javascript:!function(){var t=location.href,e="https://queryweb.tscc.com.tw/thsrc
 npm run build
 ```
 
-建置完成後，將 `dist\tscc-query-autofill.min.js` 檔案的內容前面加上 `javascript:`  即是 Bookmarklet 瀏覽器書籤小工具。
+建置完成後，將 `dist\tscc-query-autofill.min.js` 檔案的內容前面加上 `javascript:` 即是 Bookmarklet 瀏覽器書籤小工具。
