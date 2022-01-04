@@ -13,6 +13,7 @@
         document.getElementById('txtBirth').value = birth;
     } else if (ln === tscc_purchase_proof_url) {
         document.getElementById('VAT_Num').value = vatNum;
+        document.getElementById('txtBuy').style.display='';
         document.getElementById('txtBuy').value = vatName;
         document.getElementById('txtBank_code').value = bankCode;
     } else {
