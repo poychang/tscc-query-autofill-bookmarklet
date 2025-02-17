@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Captcha Cracking Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <h1>驗證碼破解範例</h1>
+  <img id="captchaImage" src="https://queryweb.easycard.com.tw/thsrc_web/captcha/CaptchaImg.aspx?act=MemberLogin" alt="驗證碼" crossOrigin="anonymous" />
+  <br>
+  <button onclick="fetchCaptchaAndCrack()">破解驗證碼</button>
+  <p id="result"></p>
+
+  <script>
+    async function fetchCaptchaAndCrack() {
+      const imgElement = document.getElementById('captchaImage');
+      try {
+        // 建立 canvas 元素來取得圖片的像素數據
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+
+        // 設置 canvas 尺寸與圖片相同
+        canvas.width = imgElement.width;
+        canvas.height = imgElement.height;
+
+        // 將圖像繪製到 canvas 上
+        context.drawImage(imgElement, 0, 0, imgElement.width, imgElement.height);
+
+        // 從 canvas 中獲取圖像數據
+        const dataUrl = canvas.toDataURL();
+
+        // 使用 Tesseract 進行識別
+        Tesseract.recognize(
+          dataUrl,                // 使用 canvas 獲取的 base64 圖片數據
+          'eng',                  // 語言設置為英語（如果圖片包含中文字元，可以使用 'chi_tra'）
+          {
+            logger: info => console.log(info)  // 記錄進度
+          }
+        ).then(({ data: { text } }) => {
+          document.getElementById('result').innerText = `辨識結果: ${text.trim()}`;
+        }).catch(error => {
+          document.getElementById('result').innerText = `辨識失敗: ${error.message}`;
+        });
+      } catch (error) {
+        document.getElementById('result').innerText = `獲取圖片失敗: ${error.message}`;
+      }
+    }
+  </script>
+</body>
+</html>
